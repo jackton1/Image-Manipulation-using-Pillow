@@ -38,5 +38,29 @@ ribbons = Image.open('ribbon.jpg')
 #
 # b3.crop(box).show()
 
-# Rotate
-balloons.rotate(40, expand=True).show()
+# Rotate and expand if image out of screen proportion
+# balloons.rotate(40, expand=True).show()
+
+# Save the image after manipulation
+# balloons.rotate(-90, expand=True).save('balloon2_rot.jpg')
+
+# Save the image after manipulation with a different format
+# balloons.rotate(90, expand=True).save('balloon1_rot.jpg', format='png')
+
+box = (23, 450, 580, 693)
+
+
+# Convert a image to two subsets by cropping and pasting the cropped image back
+# with the original
+# region = balloons.crop(box)
+# region = region.convert(mode='L')
+# balloons2 = balloons.copy()
+# balloons2.paste(region, box)
+# balloons2.show()
+
+# region2 = balloons.crop(box)
+# # Transpose only does 90' conversion
+# region2 = region2.transpose(Image.FLIP_TOP_BOTTOM)
+# balloons3 = balloons.copy()
+# balloons3.paste(region2, box)
+# balloons3.show()
