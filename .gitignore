@@ -93,4 +93,3 @@ ENV/
 
 .gitignore
 .idea/
-image_enhance.py
